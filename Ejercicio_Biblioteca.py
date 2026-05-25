@@ -124,7 +124,6 @@ class Biblioteca:
 def main():
     biblioteca = Biblioteca()
     
-    # Carga inicial opcional de libros para demostrar FileNotFoundError
     try:
         with open("libros_iniciales.txt", "r", encoding="utf-8") as f:
             for linea in f:
@@ -135,7 +134,7 @@ def main():
         print("Carga inicial exitosa desde 'libros_iniciales.txt'.")
     except FileNotFoundError:
         print("Aviso: No se encontró 'libros_iniciales.txt' (se omitió la carga inicial).")
-        # Cargamos 3 libros por defecto para demostrar la carga al fallar el archivo
+        # Cargo 3 libros por defecto para demostrar la carga al fallar el archivo (FileNotFoundError)
         print("Cargando 3 libros de demostración por defecto...")
         biblioteca.agregar_libro(Libro("El Aleph", "Jorge Luis Borges", "978-950-07-2567-5"))
         biblioteca.agregar_libro(Libro("Ficciones", "Jorge Luis Borges", "978-950-07-2568-2"))

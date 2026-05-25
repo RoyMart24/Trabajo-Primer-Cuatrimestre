@@ -132,7 +132,6 @@ class Facultad:
 def main():
     facultad = Facultad()
 
-    # Carga inicial opcional de estudiantes para demostrar FileNotFoundError
     try:
         with open("estudiantes_iniciales.txt", "r", encoding="utf-8") as f:
             for linea in f:
@@ -143,7 +142,7 @@ def main():
         print("Carga inicial exitosa desde 'estudiantes_iniciales.txt'.")
     except FileNotFoundError:
         print("Aviso: No se encontró 'estudiantes_iniciales.txt' (se omitió la carga inicial).")
-        # Cargamos 3 estudiantes por defecto para demostrar la carga al fallar el archivo
+        # Cargo 3 estudiantes por defecto para demostrar la carga al fallar el archivo (FileNotFoundError)
         print("Cargando 3 estudiantes de demostración por defecto...")
         facultad.agregar_estudiante(Estudiante("Juan", "Pérez", "12345", "Analista de Sistemas", "E001"))
         facultad.agregar_estudiante(Estudiante("María", "Gómez", "67890", "Desarrollo de Software", "E002"))
