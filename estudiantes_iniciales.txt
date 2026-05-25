@@ -1,0 +1,3 @@
+Juan,Pérez,12345,Analista de Sistemas,E001
+María,Gómez,67890,Desarrollo de Software,E002
+Carlos,López,11223,Desarrollo de Software,E003
